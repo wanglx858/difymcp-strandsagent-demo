@@ -59,7 +59,7 @@ cd aws-mcp-servers-samples
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-pip install -r dify_mcp_server/requirements.txt
+pip install -r dify_mcp_servers/requirements.txt
 ```
 
 3. 配置 Dify API Key：
@@ -78,7 +78,7 @@ uv init
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]" httpx
-uv run dify_mcp_server/dify_mcp_server.py
+uv run dify_mcp_servers/dify_mcp_server.py
 ```
 
 ---
