@@ -98,7 +98,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-3. 安装
+3. 安装strands-agents-tools
 ```bash
 pip install strands-agents-tools
 ```
