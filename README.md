@@ -41,6 +41,7 @@
 
 ```bash
 git clone https://github.com/wanglx858/difymcp-strandsagent-demo.git
+
 cd difymcp-strandsagent-demo
 ````
 
