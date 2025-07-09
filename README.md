@@ -52,14 +52,14 @@ cd difymcp-strandsagent-demo
 1. 进入 MCP 服务器目录：
 
 ```bash
-cd aws-mcp-servers-samples/dify_mcp_servers
+cd aws-mcp-servers-samples
 ```
 
 2. 安装依赖：
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-pip install -r requirements.txt
+pip install -r dify_mcp_server/requirements.txt
 ```
 
 3. 配置 Dify API Key：
