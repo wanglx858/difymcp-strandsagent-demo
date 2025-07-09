@@ -98,6 +98,11 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+3. 安装
+```bash
+pip install strands-agents-tools
+```
+
 ---
 
 ## 导入 MCP 服务 🔌
