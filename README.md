@@ -130,7 +130,7 @@ pip install strands-agents-tools
     "run",
     "dify_mcp_server.py"
   ],
-  "description": "患者接收分诊智能 Agent 服务",
+  "description": "A chatbot for patient intake.",
   "status": 1
 }
 ```
