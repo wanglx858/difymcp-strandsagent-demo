@@ -144,10 +144,21 @@ def initialize_agent(config, mcp_manager=None):
     window_size = conversation_config.get("window_size", 20)
     conversation_manager = SlidingWindowConversationManager(window_size=window_size)
     
+    # Add MCP server descriptions to system prompt if available
+    enhanced_system_prompt = agent_config.get("system_prompt", "")
+    
+    if mcp_manager:
+        server_descriptions = mcp_manager.get_all_server_descriptions()
+        if server_descriptions:
+            enhanced_system_prompt += "\n\nMCP Server Information:\n"
+            for server_id, description in server_descriptions.items():
+                if description:
+                    enhanced_system_prompt += f"- {server_id}: {description}\n"
+    
     # Initialize agent with conversation manager
     return Agent(
         model=model,
-        system_prompt=agent_config.get("system_prompt"),
+        system_prompt=enhanced_system_prompt,
         tools=tools,
         max_parallel_tools=agent_config.get("max_parallel_tools", os.cpu_count() or 1),
         record_direct_tool_call=agent_config.get("record_direct_tool_call", True),

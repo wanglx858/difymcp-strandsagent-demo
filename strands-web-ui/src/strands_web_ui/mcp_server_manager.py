@@ -77,6 +77,7 @@ class MCPServerManager:
                     'args': args,
                     'env': env,
                     'auto_approve': auto_approve,
+                    'description': server_config.get('description', ''),  # Save description
                     'server': None
                 }
                 
@@ -235,5 +236,33 @@ class MCPServerManager:
             'connected': is_connected,
             'type': server_config['type'],
             'command': server_config['command'],
-            'args': server_config['args']
+            'args': server_config['args'],
+            'description': server_config.get('description', '')
         }
+    
+    def get_server_description(self, server_id: str) -> str:
+        """
+        Get the description of a server.
+        
+        Args:
+            server_id: Identifier of the server
+            
+        Returns:
+            str: Server description
+        """
+        if server_id not in self.servers:
+            return ""
+        
+        return self.servers[server_id].get('description', '')
+    
+    def get_all_server_descriptions(self) -> Dict[str, str]:
+        """
+        Get descriptions of all configured servers.
+        
+        Returns:
+            Dict[str, str]: Dictionary mapping server IDs to descriptions
+        """
+        descriptions = {}
+        for server_id, server_config in self.servers.items():
+            descriptions[server_id] = server_config.get('description', '')
+        return descriptions
