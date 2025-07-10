@@ -63,7 +63,9 @@ pip install -r dify_mcp_servers/requirements.txt
 ```
 
 3. 配置 Dify API Key：
-可在dify的探索应用里找到公开模版应用程序`Patient Intake Chatbot`
+   
+>可在dify的探索应用里找到公开模版应用程序`Patient Intake Chatbot`
+
 打开 `dify_mcp_server.py`，找到如下代码并替换为你的 API Key：
 
 ```python
@@ -164,7 +166,6 @@ http://localhost:8501
 ```
 # PROMPT
 You are a patient receiving chatbot assistant, and you need to call the patient_intake_chatbot tool to collect patient information and match it with the appropriate triage path or healthcare provider based on the patient’s symptoms, urgency, and medical history.
-
 ```
 
 5. 在工具配置区启用所需功能。
