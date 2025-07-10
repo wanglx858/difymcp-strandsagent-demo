@@ -8,7 +8,7 @@ mcp = FastMCP("dify")
 
 # Constants
 DIFY_API_BASE = "https://api.dify.ai/v1"   # You can get it from dify console.
-DEFAULT_API_KEY = "API_KEY "  # You can get the API_KEY from dify console.
+DEFAULT_API_KEY = "API_KEY"  # You can get the API_KEY from dify console.
 
 async def make_dify_request(endpoint: str, data: Dict[str, Any], api_key: str = DEFAULT_API_KEY, streaming: bool = True) -> Dict[str, Any]:
     """Make a request to the Dify API with proper error handling.
