@@ -23,8 +23,18 @@
 该项目通过将 Dify 工作流封装为 MCP 服务，并集成到 Strands Agent 平台，实现患者接收与分诊的智能对话交互。  
 通过 Strands Web UI 进行交互界面展示，支持配置多种模型和工具，方便快速部署和扩展。
 
----
+> 本项目整合自两个开源仓库，基于 AWS MCP Server 示例和 Strands Web UI 项目进行集成开发，用于 Dify MCP Agent 的演示场景。
 
+### 📎 代码来源与致谢
+
+本项目基于以下两个开源项目整合而成：
+
+- [aws-mcp-servers-samples](https://github.com/aws-samples/aws-mcp-servers-samples/tree/main)
+- [strands-web-ui](https://github.com/jief123/strands-web-ui/tree/main)
+
+感谢原作者的开源贡献！本项目遵循与原项目相同的开源协议，详见 [`LICENSE`](./LICENSE)。
+
+---
 ## 前置条件 ✅
 
 - Python 3.10 或更高版本
@@ -64,7 +74,7 @@ pip install -r dify_mcp_servers/requirements.txt
 
 3. 配置 Dify API Key：
    
->可在dify的探索应用里找到公开模版应用程序`Patient Intake Chatbot`
+>可在dify的[探索应用](https://cloud.dify.ai/explore/apps)里找到公开模版应用程序`Patient Intake Chatbot`
 
 打开 `dify_mcp_server.py`，找到如下代码并替换为你的 API Key：
 
